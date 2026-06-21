@@ -1,0 +1,45 @@
+<!-- SOCIAL PAGE -->
+<div id="pg-social" class="spage">
+  <div class="page-section">
+    <div class="pg-title"><h1>SOCIAL</h1><p>Manage friends, spectate requests, and duels.</p></div>
+    <div class="friends-panel">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+        <input class="sens-input" id="friend-add-input" placeholder="Enter a username" style="flex:1;" autocomplete="off">
+        <button class="fr-btn primary" data-action="add-friend">SEND REQUEST</button>
+      </div>
+      <div class="friend-requests-panel" style="margin-top:18px;">
+        <h3 style="margin-bottom:12px;color:var(--accent);font-family:'Orbitron',sans-serif;letter-spacing:1px;">Friend Requests</h3>
+        <div id="friend-request-list"></div>
+      </div>
+      <div style="margin-top:18px;" id="friend-list"></div>
+    </div>
+    <div class="friends-panel">
+      <h3 style="margin-bottom:12px;color:var(--accent);font-family:'Orbitron',sans-serif;letter-spacing:1px;">Spectate Requests</h3>
+      <div id="spectate-request-list"></div>
+    </div>
+    <div class="duel-panel">
+      <h3 style="margin-bottom:16px;color:var(--accent);font-family:'Orbitron',sans-serif;letter-spacing:1px;">Duels</h3>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+        <select class="sens-input" id="duel-mode-select">
+          <option value="trainer3d">3D TRAINER</option>
+        </select>
+        <input class="sens-input" id="duel-title-input" placeholder="Duel title" autocomplete="off">
+        <input class="sens-input" id="duel-period-input" type="number" min="15" value="30" style="width:120px;" placeholder="Duration (s)">
+        <button class="fr-btn primary" data-action="create-duel">CREATE DUEL</button>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-top:12px;">
+        <div style="flex:1;min-width:320px;">
+          <label style="display:block;color:var(--muted);font-size:13px;margin-bottom:6px;">Invite Friends to This Duel</label>
+          <select class="sens-input" id="duel-invite-select" multiple style="min-height:110px;"></select>
+        </div>
+      </div>
+      <div style="margin-top:18px;" id="duel-list"></div>
+    </div>
+  </div>
+  <div id="friend-profile-overlay" class="overlay">
+    <div class="overlay-card">
+      <button class="overlay-close" data-action="close-friend-profile">✕</button>
+      <div id="friend-profile-content"></div>
+    </div>
+  </div>
+</div>

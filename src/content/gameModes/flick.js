@@ -1,0 +1,15 @@
+export const FLICK_MODE = {
+  label: 'FLICK',
+  dur: 45,
+  pts: 130,
+  is3D: true,
+  badge: 'FLICK',
+  desc: 'Static targets at varied distances — pure flick accuracy and speed.',
+  maxTargets: 1,
+  movement: 'static',
+  targetLife: 2.2,
+  spawnMin: 0.28,
+  spawnBase: 0.95,
+  targetRadius: 0.48,
+  adaptive: true,
+};

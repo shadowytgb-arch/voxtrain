@@ -1,0 +1,82 @@
+<!-- PROFILE PAGE -->
+<div id="pg-profile" class="spage">
+  <div class="prof-wrap">
+    <div class="prof-top">
+      <div class="prof-card">
+      <!-- VIEW MODE -->
+      <div id="prof-view-mode">
+        <div class="prof-avatar" id="prof-avatar">🎯</div>
+        <div class="prof-name" id="prf-name">Player</div>
+        <div class="prof-title" id="prf-title">Recruit</div>
+        <div id="prof-trophy" style="font-size:20px;color:var(--accent);margin:8px 0;font-weight:700;"></div>
+        <div class="prof-stats">
+          <div class="pstat"><label>Total Score</label><span id="prf-score">0</span></div>
+          <div class="pstat"><label>Games Played</label><span id="prf-games">0</span></div>
+          <div class="pstat"><label>Best Accuracy</label><span id="prf-acc">0%</span></div>
+          <div class="pstat"><label>Total Hits</label><span id="prf-hits">0</span></div>
+          <div class="pstat"><label>Best Streak</label><span id="prf-streak">0</span></div>
+          <div class="pstat"><label>Avg. Reaction</label><span id="prf-react">—</span></div>
+        </div>
+        <button class="fr-btn primary" style="margin-top:16px;width:100%;" data-action="toggle-profile-edit">⚙️ EDIT PROFILE</button>
+      </div>
+      <!-- EDIT MODE -->
+      <div id="prof-edit-mode" style="display:none;">
+        <div style="margin-bottom:16px;">
+          <label style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">Profile Picture</label>
+          <div style="display:flex;gap:8px;margin-top:4px;">
+            <input type="file" id="prof-pic-upload" accept="image/*" style="display:none;" data-action="upload-profile-pic">
+            <button class="fr-btn" style="flex:1;" data-action="open-profile-upload">📤 UPLOAD IMAGE</button>
+            <button class="fr-btn" style="flex:1;" data-action="clear-profile-pic">🗑️ CLEAR</button>
+          </div>
+          <div id="pic-preview" style="width:100%;height:80px;background:var(--bg2);border:1px solid var(--border);border-radius:4px;margin-top:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;overflow:hidden;">No image selected</div>
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">Avatar Emoji (up to 5 chars)</label>
+          <input type="text" id="prof-edit-avatar" maxlength="5" style="width:100%;padding:8px;background:var(--bg2);border:1px solid var(--border);color:#fff;border-radius:4px;font-family:monospace;margin-top:4px;" placeholder="🎯">
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">Username (500 💎)</label>
+          <input type="text" id="prof-edit-username" style="width:100%;padding:8px;background:var(--bg2);border:1px solid var(--border);color:#fff;border-radius:4px;margin-top:4px;" placeholder="Your username">
+          <div style="font-size:11px;color:var(--muted);margin-top:4px;">Use alphanumeric and underscores only. No profanity.</div>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <button class="fr-btn primary" style="flex:1;" data-action="show-rename-confirm">✓ SAVE</button>
+          <button class="fr-btn" style="flex:1;" data-action="toggle-profile-edit">✕ CANCEL</button>
+        </div>
+      </div>
+    </div>
+      <div>
+        <div class="audio-card" style="margin-bottom:16px;">
+          <h3>🔊 AUDIO SETTINGS</h3>
+          <div class="vol-row">
+            <label>Master Volume</label>
+            <input type="range" min="0" max="100" value="80" id="vol-master" data-action="set-volume" data-audio-key="master">
+            <span id="vol-master-lbl">80%</span>
+          </div>
+          <div class="vol-row">
+            <label>Hit Sounds</label>
+            <input type="range" min="0" max="100" value="100" id="vol-hit" data-action="set-volume" data-audio-key="hit">
+            <span id="vol-hit-lbl">100%</span>
+          </div>
+          <div class="vol-row">
+            <label>Miss Sounds</label>
+            <input type="range" min="0" max="100" value="100" id="vol-miss" data-action="set-volume" data-audio-key="miss">
+            <span id="vol-miss-lbl">100%</span>
+          </div>
+          <div class="toggle-row">
+            <label>Colorblind Mode</label>
+            <label class="toggle"><input type="checkbox" id="cb-mode" data-action="toggle-colorblind"><span class="toggle-slider"></span></label>
+          </div>
+        </div>
+        <div class="prof-card" style="padding:18px;">
+          <h3 style="font-family:'Orbitron',sans-serif;font-size:13px;color:var(--accent);letter-spacing:1px;margin-bottom:12px;">🏆 BEST 3D AIM TRAINER SCORE</h3>
+          <div id="mode-bests" style="display:flex;flex-direction:column;gap:8px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="history-card">
+      <h3>📈 Accuracy History (Last 20 Games)</h3>
+      <canvas id="history-canvas"></canvas>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+export const TRAINER_3D_MODE = {
+  label: '3D TRAINER',
+  dur: 45,
+  pts: 120,
+  is3D: true,
+  badge: '3D',
+  desc: 'First-person speed, precision and tracking drills with adaptive difficulty.',
+  maxTargets: 1,
+  movement: 'wave',
+  targetLife: 3,
+  spawnMin: 0.35,
+  spawnBase: 1.2,
+  targetRadius: 0.5,
+  adaptive: true,
+};

@@ -1,0 +1,65 @@
+<!-- CUSTOMIZE PAGE -->
+<div id="pg-customize" class="spage">
+  <div class="pg-title"><h1>CUSTOMIZE</h1><p>Tune your crosshair and equip your owned cosmetics</p></div>
+  <div class="cross-section">
+    <h3>✚ CROSSHAIR CUSTOMIZER</h3>
+    <div class="cross-builder">
+      <div class="cross-controls">
+        <div class="ctrl-row">
+          <label>Type</label>
+          <div class="cross-type-row">
+            <button class="ctype-btn on" data-action="set-cross-type" data-cross-type="cross">Cross</button>
+            <button class="ctype-btn" data-action="set-cross-type" data-cross-type="dot">Dot</button>
+            <button class="ctype-btn" data-action="set-cross-type" data-cross-type="circle">Circle</button>
+            <button class="ctype-btn" data-action="set-cross-type" data-cross-type="tcross">T-Cross</button>
+            <button class="ctype-btn" data-action="set-cross-type" data-cross-type="plus">Plus</button>
+          </div>
+        </div>
+        <div class="ctrl-row">
+          <label>Size <span id="cv-size">12</span></label>
+          <input type="range" class="ctrl-slider" id="cv-size-input" min="4" max="32" value="12" data-action="update-cross" data-cross-field="size">
+        </div>
+        <div class="ctrl-row">
+          <label>Thickness <span id="cv-thick">2</span></label>
+          <input type="range" class="ctrl-slider" id="cv-thick-input" min="1" max="8" value="2" data-action="update-cross" data-cross-field="thick">
+        </div>
+        <div class="ctrl-row">
+          <label>Gap <span id="cv-gap">4</span></label>
+          <input type="range" class="ctrl-slider" id="cv-gap-input" min="0" max="20" value="4" data-action="update-cross" data-cross-field="gap">
+        </div>
+        <div class="ctrl-row" id="dot-size-row" style="display:none;">
+          <label>Dot Size <span id="cv-dot">4</span></label>
+          <input type="range" class="ctrl-slider" id="cv-dot-input" min="1" max="12" value="4" data-action="update-cross" data-cross-field="dot">
+        </div>
+        <div class="ctrl-row">
+          <label>Color</label>
+          <input type="color" class="ctrl-color" id="cv-color" value="#00e5ff" data-action="update-cross" data-cross-field="color">
+        </div>
+        <div class="ctrl-row">
+          <label>Outline <span id="cv-outline">on</span></label>
+          <label class="ctrl-toggle">
+            <input type="checkbox" id="cv-outline-toggle" checked data-action="update-cross" data-cross-field="outline">
+            <span class="ctrl-toggle-track"></span>
+          </label>
+        </div>
+        <button class="save-cross-btn" data-action="save-crosshair">SAVE CROSSHAIR</button>
+      </div>
+      <div class="cross-preview-box">
+        <canvas id="cross-canvas" width="220" height="220"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="mkt-tabs">
+    <button class="mkttab on" data-scope="customize" data-tab="balls" data-action="set-catalog-tab">BALL COLORS</button>
+    <button class="mkttab" data-scope="customize" data-tab="bgs" data-action="set-catalog-tab">BACKGROUNDS</button>
+    <button class="mkttab" data-scope="customize" data-tab="trails" data-action="set-catalog-tab">SHOT TRAILS</button>
+    <button class="mkttab" data-scope="customize" data-tab="fx" data-action="set-catalog-tab">HIT EFFECTS</button>
+    <button class="mkttab" data-scope="customize" data-tab="titles" data-action="set-catalog-tab">TITLES</button>
+  </div>
+  <div class="mkt-sec act" data-scope="customize" id="customize-balls"><div class="mkt-grid" id="custom-grid-balls"></div></div>
+  <div class="mkt-sec" data-scope="customize" id="customize-bgs"><div class="mkt-grid" id="custom-grid-bgs"></div></div>
+  <div class="mkt-sec" data-scope="customize" id="customize-trails"><div class="mkt-grid" id="custom-grid-trails"></div></div>
+  <div class="mkt-sec" data-scope="customize" id="customize-fx"><div class="mkt-grid" id="custom-grid-fx"></div></div>
+  <div class="mkt-sec" data-scope="customize" id="customize-titles"><div class="mkt-grid" id="custom-grid-titles"></div></div>
+</div>

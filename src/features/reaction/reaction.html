@@ -1,0 +1,20 @@
+<!-- REACTION TEST PAGE -->
+<div id="pg-react" class="spage">
+  <div class="react-wrap">
+    <div class="react-topbar">
+      <button class="react-back" data-action="navigate" data-route="menu">← Back to Play</button>
+    </div>
+    <div class="pg-title"><h1>REACTION TEST</h1><p>Measure your raw reaction time</p></div>
+    <div class="react-results">
+      <div class="react-stat"><label>Average</label><span id="rt-avg">—</span></div>
+      <div class="react-stat"><label>Best</label><span id="rt-best">—</span></div>
+      <div class="react-stat"><label>Worst</label><span id="rt-worst">—</span></div>
+      <div class="react-stat"><label>Attempts</label><span id="rt-cnt">0</span></div>
+    </div>
+    <div id="react-box" data-action="react-click">
+      <h2 id="react-msg" style="color:var(--muted);">Click to Start</h2>
+    </div>
+    <div class="react-history" id="react-hist"></div>
+    <button class="react-btn" data-action="reset-react">RESET</button>
+  </div>
+</div>

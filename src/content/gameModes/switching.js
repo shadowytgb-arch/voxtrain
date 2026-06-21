@@ -1,0 +1,15 @@
+export const SWITCHING_MODE = {
+  label: 'SWITCHING',
+  dur: 45,
+  pts: 110,
+  is3D: true,
+  badge: 'SWITCH',
+  desc: 'Two targets at once — fast target switching and prioritization.',
+  maxTargets: 2,
+  movement: 'wave',
+  targetLife: 2.8,
+  spawnMin: 0.32,
+  spawnBase: 0.85,
+  targetRadius: 0.46,
+  adaptive: true,
+};

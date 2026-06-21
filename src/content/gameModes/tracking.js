@@ -1,0 +1,15 @@
+export const TRACKING_MODE = {
+  label: 'TRACKING',
+  dur: 60,
+  pts: 90,
+  is3D: true,
+  badge: 'TRACK',
+  desc: 'Smooth orbiting targets — keep your crosshair glued to moving spheres.',
+  maxTargets: 1,
+  movement: 'orbit',
+  targetLife: 5,
+  spawnMin: 0.5,
+  spawnBase: 1.4,
+  targetRadius: 0.52,
+  adaptive: false,
+};

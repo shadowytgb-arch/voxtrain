@@ -1,0 +1,27 @@
+export function buildQuests() {
+  return [
+    {id:'q1',title:'First Blood',desc:'Hit 10 targets',icon:'\u{1F3AF}',reward:50,progress:0,goal:10,claimed:false,type:'hits'},
+    {id:'q2',title:'Sharp Shooter',desc:'Hit 50 targets',icon:'\u{1F3F9}',reward:50,progress:0,goal:50,claimed:false,type:'hits'},
+    {id:'q3',title:'Centurion',desc:'Hit 100 targets',icon:'\u{1F4AF}',reward:50,progress:0,goal:100,claimed:false,type:'hits'},
+    {id:'q4',title:'Marksman',desc:'Hit 500 targets',icon:'\u{1F52B}',reward:50,progress:0,goal:500,claimed:false,type:'hits'},
+    {id:'q5',title:'Legend Aim',desc:'Hit 1000 targets',icon:'\u{1F451}',reward:50,progress:0,goal:1000,claimed:false,type:'hits'},
+    {id:'q6',title:'Streak Starter',desc:'5-hit streak',icon:'\u26A1',reward:50,progress:0,goal:5,claimed:false,type:'streak'},
+    {id:'q7',title:'On Fire',desc:'10-hit streak',icon:'\u{1F525}',reward:50,progress:0,goal:10,claimed:false,type:'streak'},
+    {id:'q8',title:'Unstoppable',desc:'20-hit streak',icon:'\u{1F4A5}',reward:50,progress:0,goal:20,claimed:false,type:'streak'},
+    {id:'q9',title:'First Game',desc:'Complete 1 game',icon:'\u{1F3AE}',reward:50,progress:0,goal:1,claimed:false,type:'games'},
+    {id:'q10',title:'Veteran',desc:'Complete 10 games',icon:'\u{1F3C6}',reward:50,progress:0,goal:10,claimed:false,type:'games'},
+    {id:'q11',title:'Dedicated',desc:'Complete 25 games',icon:'\u{1F396}',reward:50,progress:0,goal:25,claimed:false,type:'games'},
+    {id:'q12',title:'Scorer',desc:'Score 1000 in one game',icon:'\u{1F4C8}',reward:50,progress:0,goal:1000,claimed:false,type:'score'},
+    {id:'q13',title:'Elite Score',desc:'Score 5000 in one game',icon:'\u{1F31F}',reward:50,progress:0,goal:5000,claimed:false,type:'score'},
+    {id:'q14',title:'Spender',desc:'Buy any item',icon:'\u{1F48E}',reward:50,progress:0,goal:1,claimed:false,type:'purchases'},
+    {id:'q15',title:'Collector',desc:'Buy 5 items',icon:'\u{1F6D2}',reward:50,progress:0,goal:5,claimed:false,type:'purchases'},
+    {id:'q16',title:'Lightning Reflex',desc:'Average reaction under 250ms',icon:'\u26A1',reward:50,progress:0,goal:1,claimed:false,type:'react250'},
+    {id:'q17',title:'Speed Demon',desc:'Average reaction under 200ms',icon:'\u{1F3CE}',reward:50,progress:0,goal:1,claimed:false,type:'react200'},
+    {id:'q18',title:'Accuracy King',desc:'Finish a game with 95%+ accuracy',icon:'\u{1F3AF}',reward:50,progress:0,goal:1,claimed:false,type:'acc95'},
+    {id:'q20',title:'Grinder',desc:'Play 50 total games',icon:'\u2699',reward:50,progress:0,goal:50,claimed:false,type:'games'},
+    {id:'q21',title:'Duelist',desc:'Join 3 duels',icon:'\u2694',reward:80,progress:0,goal:3,claimed:false,type:'join_duel'},
+    {id:'q22',title:'Spectator',desc:'Accept a spectate request',icon:'\u{1F441}',reward:80,progress:0,goal:1,claimed:false,type:'accept_spectate'},
+    {id:'q23',title:'Neon Rider',desc:'Equip a neon background',icon:'\u{1F303}',reward:80,progress:0,goal:1,claimed:false,type:'bg_neon'},
+    {id:'q24',title:'Big Winner',desc:'Win a duel',icon:'\u{1F3C6}',reward:100,progress:0,goal:1,claimed:false,type:'win_duel'},
+  ];
+}

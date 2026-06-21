@@ -1,0 +1,37 @@
+<!-- LOGIN PAGE -->
+<div id="pg-login" class="act">
+  <div class="lbox">
+    <div class="lbox-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="14" stroke="#00e5ff" stroke-width="1.5"/>
+        <circle cx="16" cy="16" r="9" stroke="#00e5ff" stroke-width="1"/>
+        <circle cx="16" cy="16" r="4" fill="#ff2d6e"/>
+        <line x1="16" y1="2" x2="16" y2="8" stroke="#00e5ff" stroke-width="1.5"/>
+        <line x1="16" y1="24" x2="16" y2="30" stroke="#00e5ff" stroke-width="1.5"/>
+        <line x1="2" y1="16" x2="8" y2="16" stroke="#00e5ff" stroke-width="1.5"/>
+        <line x1="24" y1="16" x2="30" y2="16" stroke="#00e5ff" stroke-width="1.5"/>
+      </svg>
+      <div class="logo-text" style="font-size:22px;">Vox<span>Train</span></div>
+    </div>
+    <p>Competitive aim training platform</p>
+
+    <!-- External Sign-In Button -->
+    <button class="google-btn" data-action="google-signin">
+      <img src="/icons/google-g.png" alt="Google">
+      Continue with Google
+    </button>
+
+    <div class="or-divider">OR</div>
+
+    <div class="ltab-row">
+      <button class="ltab on" id="ltab-login" data-action="set-login-mode" data-mode="login">LOGIN</button>
+      <button class="ltab" id="ltab-reg" data-action="set-login-mode" data-mode="register">REGISTER</button>
+    </div>
+    <input class="lfield" id="l-user" type="text" placeholder="Username" maxlength="20" autocomplete="off">
+    <input class="lfield" id="l-pass" type="password" placeholder="Password">
+    <input class="lfield" id="l-pass2" type="password" placeholder="Confirm Password" style="display:none;">
+    <div class="lerr" id="l-err"></div>
+    <button class="lbtn" id="l-submit" data-action="submit-auth">LOG IN</button>
+    <div class="lbonus">🎁 New accounts start with <strong>500 💎 Gems</strong></div>
+  </div>
+</div>

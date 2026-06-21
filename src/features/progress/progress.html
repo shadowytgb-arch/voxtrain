@@ -1,0 +1,34 @@
+<!-- PROGRESS PAGE -->
+<div id="pg-progress" class="spage">
+  <div class="pg-title"><h1>PROGRESS</h1><p>Track quests, stats, streaks, and daily training</p></div>
+
+  <div class="stats-charts-section">
+    <h3 class="section-title">📊 Training Analytics</h3>
+    <div class="chart-grid">
+      <div class="chart-card"><h4>Score Trend</h4><canvas id="prog-score-chart"></canvas></div>
+      <div class="chart-card"><h4>Reaction Trend</h4><canvas id="prog-react-chart"></canvas></div>
+      <div class="chart-card chart-wide"><h4>Mode Breakdown</h4><canvas id="prog-mode-chart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="q-daily-banner daily-training-banner">
+    <div>
+      <h4>📋 Daily Training Routine</h4>
+      <p>Complete today's generated drills for bonus gems.</p>
+      <div id="progress-daily-tasks"></div>
+    </div>
+  </div>
+
+  <div class="q-daily-banner">
+    <div>
+      <h4>🗓 DAILY LOGIN BONUS</h4>
+      <p>Log in every day to earn gems. Reach a 7-day streak for the biggest reward.</p>
+      <div class="daily-grid" id="daily-grid"></div>
+    </div>
+    <div class="q-streak-box">
+      <div class="num" id="login-streak-num">0</div>
+      <div class="lbl">Day Streak</div>
+    </div>
+  </div>
+  <div class="qgrid" id="qgrid"></div>
+</div>

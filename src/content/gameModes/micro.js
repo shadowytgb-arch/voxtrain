@@ -1,0 +1,15 @@
+export const MICRO_MODE = {
+  label: 'MICRO',
+  dur: 45,
+  pts: 150,
+  is3D: true,
+  badge: 'MICRO',
+  desc: 'Tiny distant targets — precision micro-adjustments under pressure.',
+  maxTargets: 1,
+  movement: 'static',
+  targetLife: 1.8,
+  spawnMin: 0.35,
+  spawnBase: 1.1,
+  targetRadius: 0.28,
+  adaptive: true,
+};

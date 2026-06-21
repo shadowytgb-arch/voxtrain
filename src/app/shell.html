@@ -1,0 +1,114 @@
+<!-- COUNTDOWN -->
+<div id="cd-overlay">
+  <div id="cd-mode">3D TRAINER</div>
+  <div id="cd-num">3</div>
+</div>
+
+<!-- RESULTS -->
+<div id="results-overlay">
+  <div class="res-box">
+    <h2>ROUND COMPLETE</h2>
+    <div class="res-grade" id="res-grade">A</div>
+    <div class="res-grid">
+      <div class="res-item"><label>Score</label><span id="rs-score">0</span></div>
+      <div class="res-item"><label>Accuracy</label><span id="rs-acc">0%</span></div>
+      <div class="res-item"><label>Hits</label><span id="rs-hits">0</span></div>
+      <div class="res-item"><label>Best Streak</label><span id="rs-streak">0</span></div>
+      <div class="res-item"><label>Avg. Reaction</label><span id="rs-react">0ms</span></div>
+      <div class="res-item"><label>TTK (avg)</label><span id="rs-ttk">—</span></div>
+      <div class="res-item"><label>React σ</label><span id="rs-std">—</span></div>
+      <div class="res-item"><label>Mode</label><span id="rs-mode" style="font-size:13px;">-</span></div>
+    </div>
+    <div class="res-compare" id="res-compare"></div>
+    <div class="res-heatmap-wrap">
+      <h4 id="res-heatmap-title">Target Position Map</h4>
+      <canvas id="res-heatmap"></canvas>
+    </div>
+    <div class="res-heatmap-wrap">
+      <h4>Aim Offset from Center</h4>
+      <canvas id="res-offset-heatmap"></canvas>
+    </div>
+    <div class="gems-row" id="gems-row">💎 +0 Gems Earned</div>
+    <div class="res-btns">
+      <button class="rbtn p" data-action="restart-game">PLAY AGAIN</button>
+      <button class="rbtn s" data-action="go-menu">MENU</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAUSE -->
+<div id="pause-overlay">
+  <div class="pause-box">
+    <h2>PAUSED</h2>
+    <div id="pause-menu" class="pause-btns">
+      <button class="pbtn r" data-action="resume-game">RESUME</button>
+      <button class="pbtn s" data-action="show-pause-settings">SETTINGS</button>
+      <button class="pbtn e" data-action="quit-game">EXIT</button>
+    </div>
+    <div id="settings-pause">
+      <div class="set-row">
+        <label>FOV</label>
+        <input type="range" min="60" max="120" value="75" id="set-fov" data-action="update-setting" data-setting="fov">
+        <span id="set-fov-lbl">75</span>
+      </div>
+      <div class="set-row">
+        <label>Sensitivity</label>
+        <input type="range" min="0.1" max="2.0" step="0.1" value="0.4" id="set-sens" data-action="update-setting" data-setting="sens">
+        <span id="set-sens-lbl">0.4</span>
+      </div>
+      <div class="set-row">
+        <label>Invert Y</label>
+        <input type="checkbox" id="set-invert" data-action="update-setting" data-setting="invert">
+        <span></span>
+      </div>
+      <button class="pbtn s" data-action="hide-pause-settings">BACK</button>
+    </div>
+  </div>
+</div>
+
+<div id="spectate-overlay" class="overlay">
+  <div class="overlay-card">
+    <button class="overlay-close" data-action="stop-spectating">✕</button>
+    <div class="spectate-header">
+      <div>
+        <h2 style="font-family:'Orbitron',sans-serif;color:var(--accent);margin-bottom:6px;" id="spectate-title">Spectating</h2>
+        <div id="spectate-status" class="spectate-status">Connecting...</div>
+      </div>
+      <button class="fr-btn secondary" data-action="stop-spectating">EXIT SPECTATE</button>
+    </div>
+    <canvas id="spectate-canvas"></canvas>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="main-nav" style="display:none;">
+  <div class="logo" data-action="navigate" data-route="menu">
+    <svg class="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="16" cy="16" r="14" stroke="#00e5ff" stroke-width="1.5"/>
+      <circle cx="16" cy="16" r="9" stroke="#00e5ff" stroke-width="1"/>
+      <circle cx="16" cy="16" r="4" fill="#ff2d6e"/>
+      <line x1="16" y1="2" x2="16" y2="8" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="16" y1="24" x2="16" y2="30" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="2" y1="16" x2="8" y2="16" stroke="#00e5ff" stroke-width="1.5"/>
+      <line x1="24" y1="16" x2="30" y2="16" stroke="#00e5ff" stroke-width="1.5"/>
+    </svg>
+    <div class="logo-text">Vox<span>Train</span></div>
+  </div>
+  <button class="nav-btn on" id="nb-menu" data-action="navigate" data-route="menu">PLAY</button>
+  <button class="nav-btn" id="nb-lb" data-action="navigate" data-route="lb">LEADERBOARD</button>
+  <button class="nav-btn" id="nb-progress" data-action="navigate" data-route="progress">PROGRESS</button>
+  <button class="nav-btn" id="nb-customize" data-action="navigate" data-route="customize">CUSTOMIZE</button>
+  <button class="nav-btn" id="nb-shop" data-action="navigate" data-route="shop">SHOP</button>
+  <button class="nav-btn" id="nb-social" data-action="navigate" data-route="social">SOCIAL</button>
+  <button class="nav-btn" id="nb-profile" data-action="navigate" data-route="profile">PROFILE</button>
+  <button class="nav-btn" id="nb-updates" data-action="navigate" data-route="updates">UPDATES</button>
+  <div class="nav-r">
+    <div class="xp-wrap">
+      <div class="xp-label"><span id="nav-level">Lv 1</span><span id="nav-xp-label">0 / 100 XP</span></div>
+      <div class="xp-bar-outer"><div class="xp-bar-inner" id="nav-xp-bar" style="width:0%"></div></div>
+    </div>
+    <div class="gem-pill">💎 <span id="nav-gems">0</span></div>
+    <div class="usr-pill">👤 <span id="nav-user">Player</span></div>
+    <button class="logout-btn" data-action="logout">LOGOUT</button>
+  </div>
+</nav>

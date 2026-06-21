@@ -1,0 +1,24 @@
+<!-- GAME PAGE -->
+<div id="pg-game">
+  <div class="game-hud">
+    <div class="hstat"><label>SCORE</label><span id="h-score">0</span></div>
+    <div class="hdiv"></div>
+    <div class="hstat"><label>HITS</label><span id="h-hits">0</span></div>
+    <div class="hdiv"></div>
+    <div class="hstat"><label>MISSES</label><span id="h-miss">0</span></div>
+    <div class="hdiv"></div>
+    <div class="hstat"><label>ACC</label><span id="h-acc">—</span></div>
+    <div class="hdiv"></div>
+    <div class="hstat red"><label>STREAK</label><span id="h-streak">0</span></div>
+    <div class="hdiv"></div>
+    <div class="hstat gold"><label>TIME</label><span id="h-time">45</span></div>
+    <button class="hquit" data-action="quit-game">✕ QUIT</button>
+  </div>
+  <div class="hmode"><span id="h-mode-desc">Sharpen your speed, precision, and tracking.</span></div>
+  <div id="game-stage">
+    <div id="crosshair-center"></div>
+    <div id="hit-flash"></div>
+    <canvas id="game-canvas" style="display:none;"></canvas>
+    <canvas id="threejs-canvas"></canvas>
+  </div>
+</div>

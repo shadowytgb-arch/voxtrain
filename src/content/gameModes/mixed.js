@@ -1,0 +1,15 @@
+export const MIXED_MODE = {
+  label: 'MIXED',
+  dur: 60,
+  pts: 120,
+  is3D: true,
+  badge: 'MIXED',
+  desc: 'Adaptive blend of flicks, tracking, and switching — all-round training.',
+  maxTargets: 2,
+  movement: 'mixed',
+  targetLife: 3,
+  spawnMin: 0.35,
+  spawnBase: 1.15,
+  targetRadius: 0.5,
+  adaptive: true,
+};

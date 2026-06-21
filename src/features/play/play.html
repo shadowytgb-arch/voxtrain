@@ -1,0 +1,99 @@
+<!-- MENU PAGE -->
+<div id="pg-menu" class="spage">
+  <div style="padding:40px;">
+    <div class="sens-panel">
+      <h3>⚙ SENSITIVITY CONVERTER</h3>
+      <div class="sens-row">
+        <div class="sens-field-wrap">
+          <label>Game</label>
+          <select class="sens-input" id="sens-game" data-action="calc-sens">
+            <option value="360">CS2 / CSGO</option>
+            <option value="306">Valorant</option>
+            <option value="360">Apex Legends</option>
+            <option value="360">Overwatch 2</option>
+            <option value="360">Fortnite</option>
+          </select>
+        </div>
+        <div class="sens-field-wrap">
+          <label>Sensitivity</label>
+          <input class="sens-input" id="sens-val" type="number" value="2.5" step="0.1" min="0.01" data-action="calc-sens">
+        </div>
+        <div class="sens-field-wrap">
+          <label>DPI</label>
+          <input class="sens-input" id="sens-dpi" type="number" value="800" step="100" min="100" data-action="calc-sens">
+        </div>
+        <div class="sens-field-wrap">
+          <label>eDPI</label>
+          <input class="sens-input" id="sens-edpi" type="number" readonly style="opacity:.6;">
+        </div>
+      </div>
+      <div class="sens-result" id="sens-result">cm/360°: <span id="sens-cm">—</span> &nbsp;|&nbsp; in/360°: <span id="sens-inch">—</span></div>
+      <div class="sens-actions">
+        <button class="fr-btn primary" data-action="apply-sens">APPLY TO TRAINER</button>
+        <span class="sens-applied" id="sens-applied-lbl"></span>
+      </div>
+    </div>
+
+    <div class="round-settings">
+      <label>Round Duration</label>
+      <div class="dur-pills" id="dur-pills">
+        <button type="button" class="dur-pill" data-action="set-duration" data-duration="30">30s</button>
+        <button type="button" class="dur-pill on" data-action="set-duration" data-duration="45">45s</button>
+        <button type="button" class="dur-pill" data-action="set-duration" data-duration="60">60s</button>
+        <button type="button" class="dur-pill" data-action="set-duration" data-duration="90">90s</button>
+        <button type="button" class="dur-pill" data-action="set-duration" data-duration="0">Endless</button>
+      </div>
+    </div>
+
+    <div class="pg-title"><h1>3D AIM TRAINER</h1><p>Pick a drill mode and jump into the live first-person trainer</p></div>
+    <div class="modes-grid" id="modes-grid">
+      <div class="mcard" data-action="start-mode" data-mode="trainer3d">
+        <div class="mcard-icon">🕹️</div>
+        <h3>3D TRAINER</h3>
+        <p>Adaptive speed and precision drills — the classic all-round session.</p>
+        <span class="mbadge bx">3D</span>
+      </div>
+      <div class="mcard" data-action="start-mode" data-mode="flick">
+        <div class="mcard-icon">⚡</div>
+        <h3>FLICK</h3>
+        <p>Static targets at varied distances — pure flick accuracy.</p>
+        <span class="mbadge be">FLICK</span>
+      </div>
+      <div class="mcard" data-action="start-mode" data-mode="tracking">
+        <div class="mcard-icon">🎯</div>
+        <h3>TRACKING</h3>
+        <p>Orbiting targets — keep your crosshair on the move.</p>
+        <span class="mbadge bg">TRACK</span>
+      </div>
+      <div class="mcard" data-action="start-mode" data-mode="switching">
+        <div class="mcard-icon">🔀</div>
+        <h3>SWITCHING</h3>
+        <p>Two targets at once — fast target switching.</p>
+        <span class="mbadge bp">SWITCH</span>
+      </div>
+      <div class="mcard" data-action="start-mode" data-mode="micro">
+        <div class="mcard-icon">🔬</div>
+        <h3>MICRO</h3>
+        <p>Tiny distant targets — precision micro-adjustments.</p>
+        <span class="mbadge br">MICRO</span>
+      </div>
+      <div class="mcard" data-action="start-mode" data-mode="mixed">
+        <div class="mcard-icon">🌀</div>
+        <h3>MIXED</h3>
+        <p>Blend of flicks, tracking, and switching.</p>
+        <span class="mbadge bx">MIXED</span>
+      </div>
+      <div class="mcard" data-action="navigate" data-route="react" style="border-style:dashed;">
+        <div class="mcard-icon">⏱</div>
+        <h3>REACTION TEST</h3>
+        <p>Measure your raw reaction time in milliseconds.</p>
+        <span class="mbadge be">UTILITY</span>
+      </div>
+    </div>
+
+    <div class="daily-banner" id="play-daily-banner">
+      <h4>📋 Today's Training Routine</h4>
+      <div id="play-daily-tasks"></div>
+    </div>
+  </div>
+</div>
